@@ -1,0 +1,217 @@
+{% extends 'guide/base.html' %}
+
+{% block title %}Установка Python - Python Installation Guide{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-8">
+        <h1 class="mb-4"><i class="bi bi-download"></i> Установка Python</h1>
+        
+        <div class="alert alert-info">
+            <i class="bi bi-info-circle"></i> <strong>Важно:</strong> Рекомендуется устанавливать Python версии 3.8 или выше для лучшей совместимости с современными библиотеками.
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0">Установка на Windows</h4>
+            </div>
+            <div class="card-body">
+                <div class="installation-steps">
+                    <div class="step mb-4">
+                        <h5><span class="badge bg-primary me-2">1</span>Скачайте установщик</h5>
+                        <p>Перейдите на официальный сайт <a href="https://python.org" target="_blank">python.org</a> и скачайте последнюю версию Python для Windows.</p>
+                        <div class="bg-light p-3 rounded">
+                            <strong>Прямая ссылка:</strong> <a href="https://python.org/downloads/" target="_blank">python.org/downloads/</a>
+                        </div>
+                    </div>
+
+                    <div class="step mb-4">
+                        <h5><span class="badge bg-primary me-2">2</span>Запустите установщик</h5>
+                        <p>Запустите скачанный .exe файл. В появившемся окне обязательно отметьте:</p>
+                        <ul>
+                            <li><strong>Add Python to PATH</strong> - это позволит запускать Python из командной строки</li>
+                            <li><strong>Install launcher for all users</strong> (опционально)</li>
+                        </ul>
+                        <div class="alert alert-warning">
+                            <i class="bi bi-exclamation-triangle"></i> <strong>Внимание:</strong> Обязательно отметьте "Add Python to PATH"!
+                        </div>
+                    </div>
+
+                    <div class="step mb-4">
+                        <h5><span class="badge bg-primary me-2">3</span>Выберите компоненты</h5>
+                        <p>На экране "Optional Features" рекомендуется установить:</p>
+                        <ul>
+                            <li>Documentation</li>
+                            <li>pip (менеджер пакетов)</li>
+                            <li>tcl/tk and IDLE (встроенная IDE)</li>
+                            <li>Python test suite</li>
+                            <li>py launcher</li>
+                        </ul>
+                    </div>
+
+                    <div class="step mb-4">
+                        <h5><span class="badge bg-primary me-2">4</span>Выберите путь установки</h5>
+                        <p>Оставьте путь по умолчанию или выберите свой. Рекомендуется путь без пробелов и кириллицы.</p>
+                    </div>
+
+                    <div class="step mb-4">
+                        <h5><span class="badge bg-primary me-2">5</span>Завершение установки</h5>
+                        <p>Дождитесь завершения установки. Нажмите "Close" когда процесс завершится.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header bg-success text-white">
+                <h4 class="mb-0">Установка на macOS</h4>
+            </div>
+            <div class="card-body">
+                <div class="installation-steps">
+                    <div class="step mb-4">
+                        <h5><span class="badge bg-success me-2">1</span>Проверьте установленную версию</h5>
+                        <p>macOS обычно поставляется с предустановленным Python 2.7. Проверьте версию в терминале:</p>
+                        <pre><code class="language-bash">python --version
+python3 --version</code></pre>
+                    </div>
+
+                    <div class="step mb-4">
+                        <h5><span class="badge bg-success me-2">2</span>Установите Homebrew (рекомендуется)</h5>
+                        <p>Homebrew - лучший способ управления Python на macOS:</p>
+                        <pre><code class="language-bash">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code></pre>
+                    </div>
+
+                    <div class="step mb-4">
+                        <h5><span class="badge bg-success me-2">3</span>Установите Python через Homebrew</h5>
+                        <pre><code class="language-bash">brew install python</code></pre>
+                        <p>Это установит последнюю версию Python 3 и pip.</p>
+                    </div>
+
+                    <div class="step mb-4">
+                        <h5><span class="badge bg-success me-2">4</span>Альтернативный способ (официальный установщик)</h5>
+                        <p>Скачайте .pkg файл с <a href="https://python.org" target="_blank">python.org</a> и установите как обычное приложение macOS.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header bg-warning text-white">
+                <h4 class="mb-0">Установка на Linux</h4>
+            </div>
+            <div class="card-body">
+                <div class="installation-steps">
+                    <div class="step mb-4">
+                        <h5><span class="badge bg-warning me-2">1</span>Ubuntu/Debian</h5>
+                        <pre><code class="language-bash">sudo apt update
+sudo apt install python3 python3-pip python3-venv</code></pre>
+                    </div>
+
+                    <div class="step mb-4">
+                        <h5><span class="badge bg-warning me-2">2</span>CentOS/RHEL/Fedora</h5>
+                        <pre><code class="language-bash"># Для Fedora
+sudo dnf install python3 python3-pip
+
+# Для CentOS/RHEL
+sudo yum install python3 python3-pip</code></pre>
+                    </div>
+
+                    <div class="step mb-4">
+                        <h5><span class="badge bg-warning me-2">3</span>Arch Linux</h5>
+                        <pre><code class="language-bash">sudo pacman -S python python-pip</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header bg-info text-white">
+                <h4 class="mb-0">Проверка установки</h4>
+            </div>
+            <div class="card-body">
+                <p>После установки проверьте, что всё работает правильно:</p>
+                <pre><code class="language-bash"># Проверка версии Python
+python --version
+python3 --version
+
+# Проверка pip
+pip --version
+pip3 --version
+
+# Запуск интерактивной оболочки
+python</code></pre>
+                
+                <div class="alert alert-success">
+                    <i class="bi bi-check-circle"></i> <strong>Успешная установка:</strong> Если команды выше работают без ошибок, Python установлен правильно!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="card mb-4">
+            <div class="card-header bg-secondary text-white">
+                <h6 class="mb-0"><i class="bi bi-terminal"></i> Команды для проверки</h6>
+            </div>
+            <div class="card-body">
+                <div class="command-list">
+                    <div class="mb-3">
+                        <strong>Проверка версии:</strong>
+                        <pre><code class="language-bash">python --version</code></pre>
+                    </div>
+                    <div class="mb-3">
+                        <strong>Запуск Python:</strong>
+                        <pre><code class="language-bash">python</code></pre>
+                    </div>
+                    <div class="mb-3">
+                        <strong>Проверка pip:</strong>
+                        <pre><code class="language-bash">pip --version</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header bg-danger text-white">
+                <h6 class="mb-0"><i class="bi bi-exclamation-triangle"></i> Частые проблемы</h6>
+            </div>
+            <div class="card-body">
+                <div class="problem-list">
+                    <div class="mb-3">
+                        <strong>Python не найден:</strong>
+                        <p class="small">Убедитесь что "Add Python to PATH" был отмечен при установке.</p>
+                    </div>
+                    <div class="mb-3">
+                        <strong>Проблемы с правами:</strong>
+                        <p class="small">Запустите командную строку от имени администратора.</p>
+                    </div>
+                    <div class="mb-3">
+                        <strong>Старая версия:</strong>
+                        <p class="small">Удалите старые версии Python перед установкой новой.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header bg-dark text-white">
+                <h6 class="mb-0"><i class="bi bi-arrow-right-circle"></i> Следующие шаги</h6>
+            </div>
+            <div class="card-body">
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <a href="{% url 'ide_setup' %}" class="text-decoration-none">
+                            <i class="bi bi-gear"></i> Настроить IDE
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="{% url 'home' %}" class="text-decoration-none">
+                            <i class="bi bi-house"></i> Вернуться на главную
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

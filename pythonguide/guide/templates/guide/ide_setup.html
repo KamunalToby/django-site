@@ -1,0 +1,280 @@
+{% extends 'guide/base.html' %}
+
+{% block title %}Настройка IDE - Python Installation Guide{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-8">
+        <h1 class="mb-4"><i class="bi bi-gear"></i> Настройка среды разработки</h1>
+        
+        <div class="alert alert-info">
+            <i class="bi bi-info-circle"></i> <strong>Совет:</strong> Выбор IDE зависит от ваших предпочтений. Начните с VS Code - он бесплатный и мощный.
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0">Visual Studio Code (Рекомендуется)</h4>
+            </div>
+            <div class="card-body">
+                <div class="installation-steps">
+                    <div class="step mb-4">
+                        <h5><span class="badge bg-primary me-2">1</span>Установка VS Code</h5>
+                        <p>Скачайте VS Code с официального сайта:</p>
+                        <div class="bg-light p-3 rounded">
+                            <a href="https://code.visualstudio.com" target="_blank" class="btn btn-outline-primary">
+                                <i class="bi bi-download"></i> Скачать VS Code
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="step mb-4">
+                        <h5><span class="badge bg-primary me-2">2</span>Установка расширений</h5>
+                        <p>Откройте VS Code и установите следующие расширения через вкладку Extensions (Ctrl+Shift+X):</p>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <strong>Python</strong> от Microsoft - основное расширение для Python
+                            </li>
+                            <li class="list-group-item">
+                                <strong>Pylance</strong> - интеллектуальная поддержка Python
+                            </li>
+                            <li class="list-group-item">
+                                <strong>Python Docstring Generator</strong> - генерация документации
+                            </li>
+                            <li class="list-group-item">
+                                <strong>GitLens</strong> - улучшенная работа с Git
+                            </li>
+                            <li class="list-group-item">
+                                <strong>Bracket Pair Colorizer</strong> - подсветка скобок
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="step mb-4">
+                        <h5><span class="badge bg-primary me-2">3</span>Настройка Python в VS Code</h5>
+                        <ol>
+                            <li>Откройте папку с проектом в VS Code</li>
+                            <li>Нажмите Ctrl+Shift+P и выберите "Python: Select Interpreter"</li>
+                            <li>Выберите установленную версию Python</li>
+                            <li>VS Code автоматически предложит создать виртуальное окружение</li>
+                        </ol>
+                    </div>
+
+                    <div class="step mb-4">
+                        <h5><span class="badge bg-primary me-2">4</span>Настройка форматирования</h5>
+                        <p>Установите и настройте форматирование кода:</p>
+                        <pre><code class="language-bash"># Установка форматеров
+pip install black autopep8 flake8</code></pre>
+                        
+                        <div class="bg-light p-3 rounded mt-2">
+                            <strong>Настройки VS Code (Ctrl+,):</strong>
+                            <ul>
+                                <li>"python.formatting.provider": "black"</li>
+                                <li>"editor.formatOnSave": true</li>
+                                <li>"python.linting.enabled": true</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header bg-success text-white">
+                <h4 class="mb-0">PyCharm</h4>
+            </div>
+            <div class="card-body">
+                <div class="installation-steps">
+                    <div class="step mb-4">
+                        <h5><span class="badge bg-success me-2">1</span>Выбор версии</h5>
+                        <p>PyCharm доступен в двух версиях:</p>
+                        <ul>
+                            <li><strong>Community Edition</strong> - бесплатная, для обычной разработки</li>
+                            <li><strong>Professional Edition</strong> - платная, с дополнительными инструментами</li>
+                        </ul>
+                        <p>Для начинающих рекомендуется Community Edition.</p>
+                    </div>
+
+                    <div class="step mb-4">
+                        <h5><span class="badge bg-success me-2">2</span>Установка</h5>
+                        <p>Скачайте с <a href="https://jetbrains.com/pycharm" target="_blank">jetbrains.com/pycharm</a> и установите как обычное приложение.</p>
+                    </div>
+
+                    <div class="step mb-4">
+                        <h5><span class="badge bg-success me-2">3</span>Настройка проекта</h5>
+                        <ol>
+                            <li>Запустите PyCharm и создайте новый проект</li>
+                            <li>Выберите интерпретатор Python</li>
+                            <li>PyCharm предложит создать виртуальное окружение</li>
+                            <li>Настройте параметры проекта в Settings</li>
+                        </ol>
+                    </div>
+
+                    <div class="step mb-4">
+                        <h5><span class="badge bg-success me-2">4</span>Полезные плагины</h5>
+                        <ul>
+                            <li>.ignore - поддержка .gitignore файлов</li>
+                            <li>Key Promoter X - изучение горячих клавиш</li>
+                            <li>GitToolBox - улучшенная работа с Git</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header bg-warning text-white">
+                <h4 class="mb-0">Другие популярные IDE</h4>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <div class="border rounded p-3 h-100">
+                            <h6><i class="bi bi-terminal"></i> Sublime Text</h6>
+                            <p class="small">Легкий и быстрый редактор с расширением Package Control</p>
+                            <ul class="small">
+                                <li>Установите Package Control</li>
+                                <li>Добавьте пакеты: Anaconda, SublimeLinter</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="border rounded p-3 h-100">
+                            <h6><i class="bi bi-terminal"></i> Atom</h6>
+                            <p class="small">Редактор от GitHub с множеством пакетов</p>
+                            <ul class="small">
+                                <li>Установите пакеты: atom-python-run, linter-flake8</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="border rounded p-3 h-100">
+                            <h6><i class="bi bi-terminal"></i> Jupyter Notebook</h6>
+                            <p class="small">Идеально для научных вычислений и анализа данных</p>
+                            <ul class="small">
+                                <li>Установка: <code>pip install jupyter</code></li>
+                                <li>Запуск: <code>jupyter notebook</code></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="border rounded p-3 h-100">
+                            <h6><i class="bi bi-terminal"></i> Spyder</h6>
+                            <p class="small">Научная IDE, похожая на MATLAB</p>
+                            <ul class="small">
+                                <li>Входит в состав Anaconda</li>
+                                <li>Отличная для анализа данных</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header bg-info text-white">
+                <h4 class="mb-0">Настройка виртуального окружения</h4>
+            </div>
+            <div class="card-body">
+                <p>Виртуальное окружение - обязательная практика для Python разработки:</p>
+                
+                <h5>Создание виртуального окружения:</h5>
+                <pre><code class="language-bash"># Создание окружения
+python -m venv myenv
+
+# Активация (Windows)
+myenv\Scripts\activate
+
+# Активация (macOS/Linux)
+source myenv/bin/activate
+
+# Деактивация
+deactivate</code></pre>
+
+                <h5>Установка пакетов:</h5>
+                <pre><code class="language-bash"># Установка пакетов
+pip install django requests numpy
+
+# Сохранение зависимостей
+pip freeze > requirements.txt
+
+# Установка из файла
+pip install -r requirements.txt</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="card mb-4">
+            <div class="card-header bg-secondary text-white">
+                <h6 class="mb-0"><i class="bi bi-star"></i> Рекомендации по выбору</h6>
+            </div>
+            <div class="card-body">
+                <div class="recommendation-list">
+                    <div class="mb-3">
+                        <strong>Для начинающих:</strong>
+                        <p class="small text-success">VS Code - простой и мощный</p>
+                    </div>
+                    <div class="mb-3">
+                        <strong>Для профессионалов:</strong>
+                        <p class="small">PyCharm Professional - максимум возможностей</p>
+                    </div>
+                    <div class="mb-3">
+                        <strong>Для науки:</strong>
+                        <p class="small">Jupyter Notebook или Spyder</p>
+                    </div>
+                    <div class="mb-3">
+                        <strong>Для быстрой работы:</strong>
+                        <p class="small">Sublime Text или Vim</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header bg-dark text-white">
+                <h6 class="mb-0"><i class="bi bi-keyboard"></i> Полезные горячие клавиши</h6>
+            </div>
+            <div class="card-body">
+                <div class="shortcuts-list">
+                    <div class="mb-2">
+                        <strong>VS Code:</strong>
+                        <ul class="small">
+                            <li>Ctrl+Shift+P - команда</li>
+                            <li>Ctrl+` - терминал</li>
+                            <li>F12 - перейти к определению</li>
+                        </ul>
+                    </div>
+                    <div class="mb-2">
+                        <strong>PyCharm:</strong>
+                        <ul class="small">
+                            <li>Ctrl+Alt+S - настройки</li>
+                            <li>Ctrl+Shift+A - найти действие</li>
+                            <li>Ctrl+B - перейти к определению</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h6 class="mb-0"><i class="bi bi-arrow-right-circle"></i> Следующие шаги</h6>
+            </div>
+            <div class="card-body">
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <a href="{% url 'python_installation' %}" class="text-decoration-none">
+                            <i class="bi bi-download"></i> Установить Python
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="{% url 'home' %}" class="text-decoration-none">
+                            <i class="bi bi-house"></i> Вернуться на главную
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
