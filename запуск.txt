@@ -1,0 +1,5 @@
+python manage.py migrate
+py manage.py runserver
+
+создать аккаунт:
+python manage.py createsuperuser
